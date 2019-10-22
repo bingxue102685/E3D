@@ -111,4 +111,18 @@ namespace E3D
 
 		return result.substr(0, end);
 	}
+
+	inline EFloat Clamp(EFloat value, EFloat min, EFloat max)
+	{
+		if (value < min)
+		{
+			return min;
+		}
+
+		if (value > max)
+		{
+			return max;
+		}
+		return value;
+	}
 }
