@@ -54,7 +54,7 @@ namespace E3D
 	#define KEY_UP(vk_code) ((GetAsyncKeyState(vk_code) & 0x8000) ? 0 : 1)
 
 	//°²È«É¾³ý
-	#define	 SafeDelete(ptr) if(ptf){delete ptr; ptr = 0;}
+	#define	 SafeDelete(ptr) if(ptr){delete ptr; ptr = 0;}
 	#define SafeDeleteArray(ptr) if(ptr){delete []ptr; ptr = 0;}
 
 	//Êä³ö
