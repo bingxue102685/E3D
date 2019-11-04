@@ -118,12 +118,26 @@
   <ItemGroup>
     <ClInclude Include="..\ECore\E3DHead.h" />
     <ClInclude Include="..\ECore\ECommon.h" />
+    <ClInclude Include="..\ECore\ECore.h" />
+    <ClInclude Include="..\ECore\EFrustum.h" />
+    <ClInclude Include="..\ECore\EGraphics.h" />
+    <ClInclude Include="..\ECore\ELight.h" />
+    <ClInclude Include="..\ECore\EMaterial.h" />
+    <ClInclude Include="..\ECore\EMath.h" />
     <ClInclude Include="..\ECore\EMatrix.h" />
     <ClInclude Include="..\ECore\EUtil.h" />
+    <ClInclude Include="..\ECore\EVector.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\ECore\ECore.cpp" />
+    <ClCompile Include="..\ECore\EFrustum.cpp" />
+    <ClCompile Include="..\ECore\EGraphics.cpp" />
+    <ClCompile Include="..\ECore\ELight.cpp" />
+    <ClCompile Include="..\ECore\EMaterial.cpp" />
+    <ClCompile Include="..\ECore\EMath.cpp" />
     <ClCompile Include="..\ECore\EMatirx.cpp" />
     <ClCompile Include="..\ECore\EUtil.cpp" />
+    <ClCompile Include="..\ECore\EVector.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

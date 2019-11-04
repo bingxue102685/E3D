@@ -27,12 +27,54 @@
     <ClInclude Include="..\ECore\EUtil.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\ECore\EVector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ECore\ELight.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ECore\EFrustum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ECore\ECore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ECore\EMath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ECore\EGraphics.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ECore\EMaterial.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\ECore\EMatirx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\ECore\EUtil.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ECore\EVector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ECore\ELight.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ECore\EFrustum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ECore\ECore.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ECore\EMath.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ECore\EGraphics.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ECore\EMaterial.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
