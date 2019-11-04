@@ -19,16 +19,34 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ECamera.cpp" />
+    <ClInclude Include="include\E3DHead.h" />
+    <ClInclude Include="include\ECommon.h" />
+    <ClInclude Include="include\ECore.h" />
+    <ClInclude Include="include\EFrustum.h" />
+    <ClInclude Include="include\EGraphics.h" />
+    <ClInclude Include="include\ELight.h" />
+    <ClInclude Include="include\EMaterial.h" />
+    <ClInclude Include="include\EMath.h" />
+    <ClInclude Include="include\EMatrix.h" />
+    <ClInclude Include="include\EUtil.h" />
+    <ClInclude Include="include\EVector.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ECamera.h" />
+    <ClCompile Include="src\ECore.cpp" />
+    <ClCompile Include="src\EFrustum.cpp" />
+    <ClCompile Include="src\EGraphics.cpp" />
+    <ClCompile Include="src\ELight.cpp" />
+    <ClCompile Include="src\EMaterial.cpp" />
+    <ClCompile Include="src\EMath.cpp" />
+    <ClCompile Include="src\EMatirx.cpp" />
+    <ClCompile Include="src\EUtil.cpp" />
+    <ClCompile Include="src\EVector.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{806F5BF1-B798-449E-84E7-540A73AE7C98}</ProjectGuid>
+    <ProjectGuid>{F1A2841C-5952-4106-9DC1-F830D7209F1B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>EEngine</RootNamespace>
+    <RootNamespace>ECore</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -90,20 +108,18 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <Lib>
-      <AdditionalLibraryDirectories>E:\workspace\E3D\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
