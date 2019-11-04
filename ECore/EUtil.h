@@ -55,10 +55,10 @@ namespace E3D
 	//转成宽字符串
 	inline EWString ToEWString(const EString &str)
 	{
-		int wcsLen = ::MultiByteToWideChar(CP_ACP, NULL, str.c_str(), str.size(), NULL, 0);
+		int wcsLen = ::MultiByteToWideChar(CP_ACP, NULL, str.c_str(), (int)str.size(), NULL, 0);
 		WCHAR *tString = new WCHAR[wcsLen + 1];
 
-		::MultiByteToWideChar(CP_ACP, NULL, str.c_str(), str.size(), tString, wcsLen);
+		::MultiByteToWideChar(CP_ACP, NULL, str.c_str(), (int)str.size(), tString, wcsLen);
 
 		//最后加上'\0'
 		tString[wcsLen] = '\0';

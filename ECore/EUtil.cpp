@@ -32,7 +32,7 @@ namespace E3D
 		va_list arglist;	
 		//利用在栈上的可变的参数打印输出字符串
 		va_start(arglist, format);
-		vsprintf(buffer, format, arglist);
+		vsprintf_s(buffer, format, arglist);
 		va_end(arglist);
 
 		EString info(buffer);

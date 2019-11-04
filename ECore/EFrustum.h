@@ -3,6 +3,7 @@
 #include "ECommon.h"
 #include "EVector.h"
 #include "EMatrix.h"
+#include "ECore.h"
 
 namespace E3D
 {

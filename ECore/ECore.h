@@ -1,4 +1,4 @@
-#pragma
+#pragma once
 
 #include "ECommon.h"
 #include "EVector.h"
@@ -7,28 +7,28 @@
 
 namespace E3D
 {
-#define EPOLY_ATTR_2SIDE					0x0001		//双面
-#define EPOLY_ATTR_TRANSPARENT				0x0002		//透明
+	#define EPOLY_ATTR_2SIDE					0x0001		//双面
+	#define EPOLY_ATTR_TRANSPARENT				0x0002		//透明
 
-#define EPOLY_ATTR_SHADE_MODE_PURE			0x0004
-#define EPOLY_ATTR_SHADE_MODE_CONSTANT		0x0004
-#define EPOLY_ATTR_SHADE_MODE_FLAT			0x0008
-#define EPOLY_ATTR_SHADE_MODE_GOURAUD		0x0010
-#define EPOLY_ATTR_SHADE_MODE_PHONG			0x0020
-#define EPOLY_ATTR_SHADE_MODE_FASTPHONE		0x0020
-#define EPOLY_ATTR_SHADE_MODE_TEXTURE		0x0040
+	#define EPOLY_ATTR_SHADE_MODE_PURE			0x0004
+	#define EPOLY_ATTR_SHADE_MODE_CONSTANT		0x0004
+	#define EPOLY_ATTR_SHADE_MODE_FLAT			0x0008
+	#define EPOLY_ATTR_SHADE_MODE_GOURAUD		0x0010
+	#define EPOLY_ATTR_SHADE_MODE_PHONG			0x0020
+	#define EPOLY_ATTR_SHADE_MODE_FASTPHONE		0x0020
+	#define EPOLY_ATTR_SHADE_MODE_TEXTURE		0x0040
 
-#define EPOLY_ATTR_VERTEX_POSITION			0x1000
-#define EPOLY_ATTR_VERTEX_NORMAL			0x2000
-#define EPOLY_ATTR_VERTEX_UV				0x4000
+	#define EPOLY_ATTR_VERTEX_POSITION			0x1000
+	#define EPOLY_ATTR_VERTEX_NORMAL			0x2000
+	#define EPOLY_ATTR_VERTEX_UV				0x4000
 
-#define EPOLY_STATE_ACTIVE					0x0100		//有效状态
-#define EPOLY_STATE_CLIPPED					0x0200		//被裁剪状态
-#define EPOLY_STATE_BACKFACE				0x0400		//背面状态
+	#define EPOLY_STATE_ACTIVE					0x0100		//有效状态
+	#define EPOLY_STATE_CLIPPED					0x0200		//被裁剪状态
+	#define EPOLY_STATE_BACKFACE				0x0400		//背面状态
 
-#define EOBJECT_STATE_ACTIVE				0x0001
-#define	EOBJECT_STATE_VISIBLE				0x0002
-#define EOBJECT_STATE_CULLED				0x0004
+	#define EOBJECT_STATE_ACTIVE				0x0001
+	#define	EOBJECT_STATE_VISIBLE				0x0002
+	#define EOBJECT_STATE_CULLED				0x0004
 
 	//物体剔除类型
 	enum CULL_TYPE
@@ -189,16 +189,18 @@ namespace E3D
 	//对ERenderList4D进行变换  可以进行位移变换和旋转变换
 	//transformType 指定了对哪一个顶点列表进行变换
 	void Transform_Renderlist4D(ERenderList4D *renderList, const EMatrix44 &mat, OBJ_TRANSFORM_TYPE transformType);
+
+	
 	
 	//将Object插入RenderList,这里LocalList存储的是原始坐标，TransformList存储的是经过平移缩放后的坐标
-	void Insert_Object4D_To_RenderList4D(ERenderList4D *renderList, EObject4D *obj, OBJ_TRANSFORM_TYPE transformType = TRANSFORM_LOCAL_TO_TRANS, bool transformScaleAndPosition = false);
+	void Insert_Object4D_To_RenderList4D(ERenderList4D *renderList, EObject4D *obj, OBJ_TRANSFORM_TYPE transformType = OBJ_TRANSFORM_TYPE::TRANSFORM_LOCAL_TO_TRANS, bool transformScaleAndPosition = false);
 
-	void Local_To_World_Object4D(EObject4D *obj, OBJ_TRANSFORM_TYPE transformType = TRANSFORM_LOCAL_TO_TRANS);
+	void Local_To_World_Object4D(EObject4D *obj, OBJ_TRANSFORM_TYPE transformType = OBJ_TRANSFORM_TYPE::TRANSFORM_LOCAL_TO_TRANS);
 
-	void Local_To_World_RenderList4D(ERenderList4D *reanderList, const EVector4D &pos, OBJ_TRANSFORM_TYPE transformType = TRANSFORM_LOCAL_TO_TRANS);
+	void Local_To_World_RenderList4D(ERenderList4D *reanderList, const EVector4D &pos, OBJ_TRANSFORM_TYPE transformType = OBJ_TRANSFORM_TYPE::TRANSFORM_LOCAL_TO_TRANS);
 
 	//剔除
-	bool Cull_Object4D(EObject4D *object, EFrustum *camera, CULL_TYPE cullType = CULL_SPHERE);
+	bool Cull_Object4D(EObject4D *object, EFrustum *camera, CULL_TYPE cullType = CULL_TYPE::CULL_SPHERE);
 
 	//消除背面，背面消除算法的射线机视点是基于世界坐标的，所有需要将顶点变换成摄像机坐标前 进行背面消除
 	bool Remove_Backface(EPolyon4D *poly, EFrustum *camera);

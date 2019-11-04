@@ -183,7 +183,7 @@ namespace E3D
 		}
 	}
 
-	void Insert_Object4D_To_RenderList4D(ERenderList4D *renderList, EObject4D *object, OBJ_TRANSFORM_TYPE transformType = TRANSFORM_LOCAL_TO_TRANS, bool transformScaleAndPosition = false)
+	void Insert_Object4D_To_RenderList4D(ERenderList4D *renderList, EObject4D *object, OBJ_TRANSFORM_TYPE transformType, bool transformScaleAndPosition)
 	{
 		if (!object)
 		{
@@ -282,7 +282,7 @@ namespace E3D
 		}
 	}
 
-	void Local_To_World_Object4D(EObject4D *object, OBJ_TRANSFORM_TYPE transformType = TRANSFORM_LOCAL_TO_TRANS)
+	void Local_To_World_Object4D(EObject4D *object, OBJ_TRANSFORM_TYPE transformType)
 	{
 		if (!object)
 		{
@@ -320,7 +320,7 @@ namespace E3D
 		}
 	}
 
-	void Local_To_World_RenderList4D(ERenderList4D *renderList, const EVector4D &pos, OBJ_TRANSFORM_TYPE transformType = TRANSFORM_LOCAL_TO_TRANS)
+	void Local_To_World_RenderList4D(ERenderList4D *renderList, const EVector4D &pos, OBJ_TRANSFORM_TYPE transformType)
 	{
 		EPolyonF4D *poly = NULL;
 		switch (transformType)
@@ -519,7 +519,7 @@ namespace E3D
 		EPolyon4D *poly = NULL;
 		while (obj)
 		{
-			if (!obj->state & EOBJECT_STATE_CULLED)
+			if (!(obj->state & EOBJECT_STATE_CULLED))
 			{
 				for (EInt i = 0; i < obj->polyonNumber; i++)
 				{

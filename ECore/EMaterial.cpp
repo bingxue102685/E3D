@@ -131,21 +131,21 @@ namespace E3D
 								std::size_t ambientIndex = info.find("ambient");
 								if (ambientIndex == 0)
 								{
-									sscanf(info.c_str(), "%s %f %f %f", temp, &material->ambient.r, &material->ambient.g, &material->ambient.b);
+									sscanf_s(info.c_str(), "%s %f %f %f", temp, &material->ambient.r, &material->ambient.g, &material->ambient.b);
 									continue;
 								}
 								//Âþ·´Éä
 								std::size_t diffuseIndex = info.find("diffuse");
 								if (diffuseIndex == 0)
 								{
-									sscanf(info.c_str(), "%s %f %f %f", temp, &material->diffuse.r, &material->diffuse.g, &material->diffuse.b);
+									sscanf_s(info.c_str(), "%s %f %f %f", temp, &material->diffuse.r, &material->diffuse.g, &material->diffuse.b);
 									continue;
 								}
 								//¾µÃæ·´Éä
 								std::size_t specularIndex = info.find("specular");
 								if (specularIndex == 0)
 								{
-									sscanf(info.c_str(), "%s %f %f %f", temp, &material->specular.r, &material->specular.g, &material->specular.b);
+									sscanf_s(info.c_str(), "%s %f %f %f", temp, &material->specular.r, &material->specular.g, &material->specular.b);
 									continue;
 								}
 								//ÌùÍ¼
@@ -153,7 +153,7 @@ namespace E3D
 								if (textureIndex == 0)
 								{
 									EChar textureName[64];
-									sscanf(info.c_str(), "%s %s", temp, textureName);
+									sscanf_s(info.c_str(), "%s %s", temp, textureName);
 									material->bitmap = new EBitmap(textureName);
 									continue;
 								}
