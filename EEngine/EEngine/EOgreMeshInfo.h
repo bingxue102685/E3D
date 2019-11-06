@@ -29,7 +29,7 @@ namespace E3D
 		//骨骼
 		M_MESH_BOUNDS = 0x9000,
 		//
-		m_SUBMESH_NAME_TABLE = 0xA000,
+		M_SUBMESH_NAME_TABLE = 0xA000,
 		//子块名字列表，每个字块包含索引和字符串
 		M_SUBMESH_NAME_TABLE_ELEMENT = 0xA100,
 	};
