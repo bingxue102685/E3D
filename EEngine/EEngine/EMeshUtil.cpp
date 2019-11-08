@@ -4,7 +4,7 @@
 
 namespace E3D
 {
-	EString ReadString(std::ifstream &in, EInt size = -1)
+	EString ReadString(std::ifstream &in, EInt size)
 	{
 		EString ss;
 		if (size == -1)
@@ -56,7 +56,7 @@ namespace E3D
 		return re;
 	}
 
-	EObject4D* LoadOgreMesh(const EString &meshName, const EVector4D &worldPos = EVector4D::ZERO, const EVector4D &scale = EVector4D(1, 1, 1))
+	EObject4D* LoadOgreMesh(const EString &meshName, const EVector4D &worldPos, const EVector4D &scale)
 	{
 		std::ifstream in;
 		in.open(GetPath(meshName).c_str(), std::ios_base::binary | std::ios_base::in);
@@ -163,7 +163,7 @@ namespace E3D
 					GEOMETRY_VERTEX_ELEMENT = ReadChunk(in);
 				}
 				//顶点缓存
-				EUShort GEOMETRY_VERTEX_BUFFER = GEOMETRY_VERTEX_BUFFER;
+				EUShort GEOMETRY_VERTEX_BUFFER = M_GEOMETRY_VERTEX_BUFFER;
 				//把索引绑定到缓存中
 				EUShort bingIndex = ReadShort(in);
 				//每个顶点的大小必须与索引声明保持一致

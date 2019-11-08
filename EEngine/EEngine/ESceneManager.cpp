@@ -27,7 +27,7 @@ namespace E3D
 		SafeDelete(mRenderList);
 	}
 
-	void ESceneManager::drawString(const EString &str, EInt x, EInt y, const EColor &c = EColor(255, 255, 255))
+	void ESceneManager::drawString(const EString &str, EInt x, EInt y, const EColor &c)
 	{
 		EGraphics::drawString(str, x, y, c);
 	}
@@ -86,7 +86,7 @@ namespace E3D
 		mMeshs.clear();
 	}
 	//根据高度图生成地形
-	EMesh* ESceneManager::createTerrain(const EString &rawFileName, const EString &heightMapFileName, EFloat uTitle = 1, EFloat vTitle = 1, EFloat blockSize = 5.0f)
+	EMesh* ESceneManager::createTerrain(const EString &rawFileName, const EString &heightMapFileName, EFloat uTitle, EFloat vTitle, EFloat blockSize)
 	{
 		if (mTerrainMesh)
 			SafeDelete(mTerrainMesh);

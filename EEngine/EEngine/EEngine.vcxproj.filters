@@ -18,9 +18,45 @@
     <ClCompile Include="ECamera.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="EMeshUtil.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EMesh.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ESceneManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ECamera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EInputListener.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EOgreMeshInfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EMeshUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EMesh.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ESceneManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ECanvas.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EWindow.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

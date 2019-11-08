@@ -20,9 +20,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ECamera.cpp" />
+    <ClCompile Include="EMesh.cpp" />
+    <ClCompile Include="EMeshUtil.cpp" />
+    <ClCompile Include="ESceneManager.cpp" />
+    <ClCompile Include="EWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ECamera.h" />
+    <ClInclude Include="ECanvas.h" />
+    <ClInclude Include="EInputListener.h" />
+    <ClInclude Include="EMesh.h" />
+    <ClInclude Include="EMeshUtil.h" />
+    <ClInclude Include="EObject.h" />
+    <ClInclude Include="EOgreMeshInfo.h" />
+    <ClInclude Include="ESceneManager.h" />
+    <ClInclude Include="EWindow.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -90,12 +102,13 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\ECore\ECore\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -103,6 +116,7 @@
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>E:\workspace\E3D\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ECore.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

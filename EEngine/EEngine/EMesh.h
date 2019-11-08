@@ -25,11 +25,11 @@ namespace E3D
 		//顶点是否在Mesh的包围盒中，是返回true 不是返回false
 		EBool intersect(const EVector3D &point);
 
-		void setVisible(EBool visible) { mIsVisible = visible; };
-		EBool isVisible() const { return isVisible; };
+		void setVisible(EBool visible) { mIsVisible = visible; }
+		EBool isVisible() const { return mIsVisible; }
 
 		//是否要进行剔除操作
-		void setCullFlag(EBool needCull) { mObject->needCull = needCull; };
+		void setCullFlag(EBool needCull) { mObject->needCull = needCull; }
 
 		//绕y轴旋转
 		void yaw(EFloat yDegree);
@@ -38,19 +38,19 @@ namespace E3D
 		//绕x轴旋转
 		void pitch(EFloat pDegree);
 
-		void setCollsionType(COLLSION_TYPE type) { mCollsionType = type; };
-		COLLSION_TYPE getCollsionType() const { return mCollsionType; };
+		void setCollsionType(COLLSION_TYPE type) { mCollsionType = type; }
+		COLLSION_TYPE getCollsionType() const { return mCollsionType; }
 
 		EObject4D* getObject() const { return mObject; };
-		EInt getPolyonNumber() const { return mPolyonNumber; };
-		EInt getVertexNumber() const { return mVertexNumber; };
-		EInt getSubmeshNumber() const { return mSubmeshNumber; };
+		EInt getPolyonNumber() const { return mPolyonNumber; }
+		EInt getVertexNumber() const { return mVertexNumber; }
+		EInt getSubmeshNumber() const { return mSubmeshNumber; }
 
 		EMaterial* getMaterial(EInt index);
 		void setMatrial(EInt index, EString matName);
 
 		//获取各轴的旋转分量 
-		EVector3D getRotateVec() const { return mRotate; };
+		EVector3D getRotateVec() const { return mRotate; }
 		//对此模型进行clone 避免再次io
 		EMesh* clone();
 	protected:

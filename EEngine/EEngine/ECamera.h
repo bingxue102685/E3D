@@ -44,7 +44,6 @@ namespace E3D
 		EFrustum *getFrustum() const { return mFrustum; }
 	protected:
 		friend class ESceneMananger;
-		ECamera();
 		EFrustum *mFrustum;
 		EBool mLockTarget;
 		EBool mNeedUpdate;
